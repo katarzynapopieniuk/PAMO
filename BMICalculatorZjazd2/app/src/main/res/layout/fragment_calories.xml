@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.calories.CaloriesFragment" >
+
+    <TextView
+        android:id="@+id/genderTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Płeć"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.104"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <TextView
+        android:id="@+id/ppmMassTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Masa [kg]"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.106"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/genderTextView"
+        app:layout_constraintVertical_bias="0.074" />
+
+    <TextView
+        android:id="@+id/ppmWeightTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wzrost [m]"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.113"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ppmMassTextView"
+        app:layout_constraintVertical_bias="0.081" />
+
+    <TextView
+        android:id="@+id/ageTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wiek"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ppmWeightTextView"
+        app:layout_constraintVertical_bias="0.15" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimalPpmMass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.446"
+        app:layout_constraintStart_toEndOf="@+id/ppmMassTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.243" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimalPpmHeight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toEndOf="@+id/ppmWeightTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalPpmMass"
+        app:layout_constraintVertical_bias="0.035" />
+
+    <EditText
+        android:id="@+id/editTextNumberAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toEndOf="@+id/ageTextView"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimalPpmHeight"
+        app:layout_constraintVertical_bias="0.106" />
+
+    <SeekBar
+        android:id="@+id/genderSeekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="155dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="103dp"
+        android:max="1"
+        android:progress="3"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNumberDecimalPpmMass"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/genderTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.737" />
+
+    <TextView
+        android:id="@+id/genderTextViewFemale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kobieta"
+        app:layout_constraintBottom_toTopOf="@+id/genderSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.347"
+        app:layout_constraintStart_toEndOf="@+id/genderTextView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882" />
+
+    <TextView
+        android:id="@+id/genderTextViewMale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mężczyzna"
+        app:layout_constraintBottom_toTopOf="@+id/genderSeekBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toEndOf="@+id/genderTextViewFemale"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.882" />
+
+    <Button
+        android:id="@+id/calculateCaloriesButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Oblicz"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberAge"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ppmTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Twoja podstawowa przemiana materii:"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.295"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calculateCaloriesButton"
+        app:layout_constraintVertical_bias="0.161" />
+
+    <TextView
+        android:id="@+id/ppmResultTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ppmTextView"
+        app:layout_constraintVertical_bias="0.136" />
+</androidx.constraintlayout.widget.ConstraintLayout>

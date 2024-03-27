@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">BMI Calculator - Zjazd 2</string>
+    <string name="title_start">Start</string>
+    <string name="title_bmi">Oblicz BMI</string>
+    <string name="title_notifications">Oblicz kalorie</string>
+    <string name="start_message">Start</string>
+    <string name="title_dishes">Przepisy</string>
+    <string name="hello_dishes">Co mogę jeść?</string>
+    <string-array name="dishes_list">
+        <item>Jajko z majonezem</item>
+        <item>Zapiekane jabłko z cynamonem</item>
+    </string-array>
+    <string-array name="recipes">
+        <item>Jajko z majonezem|Ugotuj jajko na twardo. Obierz, przekrój na pół wzdłuż dłuższej osi. Obie połówki ułuż na tależu płaską częścią do góry. Posmaruj majonezem według uznania.</item>
+        <item>Zapiekane jabłko z cynamonem|Umyj jabłko, przekrój na pół i usuń gniazda nasienne. Wymieszaj łyżkę miodu ze szczyptą cynamonu i powstałą miksturę wlej do jabłka w miejsce, w którym uprzednio znajdowało się gniazdo nasienne. Opcjonalnie włóż do środka połówkę orzecha włoskiego. Połącz obie połówki jabłka i połóż całość na blaszce. Piekarnik rozgrzej do 170 stopni Celsjusza. Włóż blaszkę do piekarnika. Piecz od 30 do 60 minut w zależności od wielkości jabłka. </item>
+    </string-array>
+
+
+</resources>
