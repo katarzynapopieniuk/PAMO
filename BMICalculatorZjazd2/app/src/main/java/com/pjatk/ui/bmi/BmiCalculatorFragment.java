@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -50,6 +51,9 @@ public class BmiCalculatorFragment extends Fragment {
             }
         });
 
+        WebView webView = root.findViewById(R.id.bmiChartWebView);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("file:///android_asset/bmi_chart.html");
         return root;
     }
 

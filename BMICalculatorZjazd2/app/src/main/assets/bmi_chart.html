@@ -1,0 +1,32 @@
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages':['corechart']});
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Data', 'BMI'],
+            ['11.04',  20.03,],
+            ['15.04',  20.3],
+            ['20.04',  21.01],
+            ['30.04',  20.85]
+          ]);
+
+          var options = {
+            title: 'BMI',
+            curveType: 'function',
+            legend: { position: 'bottom' }
+          };
+
+          var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+          chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+<div id="curve_chart" style=""></div>
+</body>
+</html>

@@ -14,10 +14,10 @@
         android:text="Masa [kg]"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.133"
+        app:layout_constraintHorizontal_bias="0.128"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.167" />
+        app:layout_constraintVertical_bias="0.047" />
 
     <TextView
         android:id="@+id/heightTextView"
@@ -38,10 +38,10 @@
         android:text="BMI: "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.158"
+        app:layout_constraintHorizontal_bias="0.147"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/heightTextView"
-        app:layout_constraintVertical_bias="0.316" />
+        app:layout_constraintVertical_bias="0.242" />
 
     <EditText
         android:id="@+id/editTextBodyMass"
@@ -52,10 +52,10 @@
         android:inputType="numberDecimal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.072"
+        app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toEndOf="@+id/ppmMassTextView"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.173" />
+        app:layout_constraintVertical_bias="0.049" />
 
     <EditText
         android:id="@+id/editTextHeight"
@@ -80,7 +80,7 @@
         app:layout_constraintHorizontal_bias="0.181"
         app:layout_constraintStart_toEndOf="@+id/bmiTextView"
         app:layout_constraintTop_toBottomOf="@+id/calculateButton"
-        app:layout_constraintVertical_bias="0.105" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <Button
         android:id="@+id/calculateButton"
@@ -93,4 +93,15 @@
         app:layout_constraintStart_toEndOf="@+id/heightTextView"
         app:layout_constraintTop_toBottomOf="@+id/editTextHeight"
         app:layout_constraintVertical_bias="0.101" />
+
+    <WebView
+        android:id="@+id/bmiChartWebView"
+        android:layout_width="412dp"
+        android:layout_height="352dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
