@@ -1,7 +1,6 @@
 package com.pjatk.ui.dishes;
 
 import android.os.Bundle;
-import android.util.SparseArray;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,11 +11,14 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.pjatk.R;
 import com.pjatk.databinding.FragmentDishesBinding;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 /**
@@ -30,6 +32,11 @@ public class DishesFragment extends Fragment implements AdapterView.OnItemSelect
     private TextView recipeTextView;
 
     private Map<String,String> recipes;
+
+    private final IngredientAdapter ingredientAdapter = new IngredientAdapter(List.of(
+            new Ingredient("jajko"),
+            new Ingredient("majonez")
+    ));
 
     public DishesFragment() {
     }
@@ -60,6 +67,10 @@ public class DishesFragment extends Fragment implements AdapterView.OnItemSelect
         recipeTextView = root.findViewById(R.id.recipeTextView);
 
         recipes = parseRecipes(R.array.recipes);
+
+        RecyclerView ingredientsRV = root.findViewById(R.id.ingredientsRV);
+        ingredientsRV.setAdapter(ingredientAdapter);
+        ingredientsRV.setLayoutManager(new LinearLayoutManager(getContext()));
 
         return root;
     }
